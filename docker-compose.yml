@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    build: db
+    restart: always
+    environment:
+      POSTGRES_USER: gofiber_api
+      POSTGRES_PASSWORD: hJHCpmSQ
+      POSTGRES_DB: gofiber_api
+    volumes:
+      - './db/data:/var/lib/postgresql/data'
+    ports:
+      - '5633:5432'
